@@ -12,7 +12,7 @@ mongoose.connection.once('open', () => {
 });
 
 app.get('/', function(req, res) { 
-  res.send("Welcome to my GraphQl app"); 
+  res.send("Welcome to my GraphQL app"); 
 })
 
 app.use('/graphql', graphqlHTTP({
