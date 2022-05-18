@@ -6,7 +6,7 @@ const port = 4000;
 const schema = require('./schema/model');
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://catafest-work:EDCEDCEDC77@cluster0.qgeie.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://your-account:your-password@cluster0.qgeie.mongodb.net/?retryWrites=true&w=majority')
 mongoose.connection.once('open', () => {
   console.log('... connected to database')
 });
