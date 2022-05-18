@@ -20,7 +20,7 @@ const posts = [
   }
 ];
 
-const author = [
+const authors = [
   {
     id: 0,
     name: 'catafest-work', 
@@ -41,7 +41,7 @@ const PostsType = new GraphQLObjectType({
     author_data: { 
       type: AuthorType,
       resolve(parent, args) {
-        return _.find(author, (author) => {
+        return _.find(authors, (author) => {
           if(author.name == parent.author) {
             return author;
           }
@@ -97,7 +97,7 @@ const RootQuery = new GraphQLObjectType({
     authors: {
       type: new GraphQLList( AuthorType),
       resolve(parent, args) {
-        return author; // ??
+        return authors; // ??
       }
     },
     posts: {
